@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Headers mapping</title>
+</head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("#putBtn").on("click", function(){ 
+		var boardNo = $("#boardNo");
+		var title = $("#title");
+		var content = $("#content");
+		var writer = $("#writer");
+		var boardNoVal = boardNo.val();
+		var titleVal = title.val();
+		var contentVal = content.val();
+		var writerVal = writer.val();
+		var boardObject = {
+			boardNo : boardNoVal,
+			title : titleVal,
+			content : contentVal,
+			writer : writerVal
+		};
+		$.ajax({
+			type : "put",
+			url : "/board/" + boardNoVal,
+			data : JSON.stringify(boardObject),
+			contentType : "application/json; charset=utf-8",
+			success : function(result) {
+				console.log("result: " + result);
+				if (result === "SUCCESS") {
+					alert("SUCCESS");
+				}
+			}
+		});
+	});
+		$("#putHeaderBtn").on("click", function() { 
+			var boardNo = $("#boardNo");
+			var title = $("#title");
+			var content = $("#content");
+			var writer = $("#writer");
+			var boardNoVal = boardNo.val();
+			var titleVal = title.val();
+			var contentVal = content.val();
+			var writerVal = writer.val();
+			var boardObject = {
+			boardNo : boardNoVal,
+			title : titleVal,
+			content : contentVal,
+			writer : writerVal
+		};
+
+		$.ajax({
+			type : "put",
+			url : "/board/" + boardNoVal,
+			headers : {
+				"X-HTTP-Method-Override" : "PUT"
+			},
+			data : JSON.stringify(boardObject),
+			contentType : "application/json; charset=utf-8",
+			success : function(result) {
+				console.log("result: " + result);
+				if (result === "SUCCESS") {
+					alert("SUCCESS");
+				}
+			}
+		});
+	});
+});
+
+</script>
+</html>

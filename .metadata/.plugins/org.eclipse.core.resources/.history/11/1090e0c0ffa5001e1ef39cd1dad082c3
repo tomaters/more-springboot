@@ -1,0 +1,79 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" session="false"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Handling request data</title>
+</head>
+<body>
+	<h1>Handling request data</h1>
+	<a href="register/hong">register/hong</a>
+	<br>
+	<a href="register/hong/100">register/hong/100</a>
+	<br>
+	<form action="/register01" method="post">
+		userId: <input type="text" name="userId" value="hong"><br>
+		password: <input type="text" name="password" value="1234"><br>
+		coin: <input type="text" name="coin" value="100"><br> <input
+			type="submit" value="register01">
+	</form>
+	<form action="/register02" method="post">
+		userId: <input type="text" name="userId" value="hong"><br>
+		password: <input type="text" name="password" value="1234"><br>
+		coin: <input type="text" name="coin" value="100"><br> <input
+			type="submit" value="register02">
+	</form>
+	<hr>
+	<h1>@DateTimeFormat handling</h1>
+	<a href="registerByDateFormat?userId=hong&dateOfBirth=20001020">registerByDateFormat?user
+		Id=hong&ampdateOfBirth=20001020</a>
+	<br>
+	<a href="registerByDateFormat01?userId=hong&dateOfBirth=2000-10-
+20">registerByDateFormat01?userId=hong&ampdateOfBirth=2000-10-20</a>
+	<br>
+	<a href="registerByDateFormat02?userId=hong&dateOfBirth=2000/10/20">registerByDateFormat0
+		2?userId=hong&ampdateOfBirth=2000/10/20</a>
+	<br>
+	<a href="registerByDateFormat03?userId=hong&dateOfBirth=20001020">registerByDateFormat03?
+		userId=hong&ampdateOfBirth=20001020</a>
+	<br>
+	<form action="/register" method="post">
+		userId: <input type="text" name="userId" value="hong"><br>
+		password: <input type="text" name="password" value="1234"><br>
+		dateOfBirth: <input type="text" name="dateOfBirth" value="20001020"><br>
+		<input type="submit" value="register">
+	</form>
+	<hr>
+	<h2>Form modes</h2>
+	<form action="/registerUserId" method="post">
+		userId: <input type="text" name="userId" /><br> <input
+			type="submit" value="registerUserId">
+	</form>
+	<form action="/registerMemberUserId" method="post">
+		userId: <input type="text" name="userId" /><br> <input
+			type="submit" value="registerMemberUserId">
+	</form>
+	<form action="/registerPassword" method="post">
+		password: <input type="password" name="password" /><br> <input
+			type="submit" value="registerPassword">
+	</form>
+	<form action="/registerRadio" method="post">
+		gender: <br> <input type="radio" name="gender" value="male"
+			checked> Male<br> <input type="radio" name="gender"
+			value="female"> Female<br> <input type="radio"
+			name="gender" value="other"> Other<br> <input
+			type="submit" value="registerRadio">
+	</form>
+	<form action="/registerSelect" method="post">nationality:</form>
+	<select name="nationality">
+		<option value="Korea" selected>Korea</option>
+		<option value="Germany">Germany</option>
+		<option value="Australia">Australia</option>
+		<option value="Canada">Canada</option>
+	</select>
+	<br>
+	<input type="submit" value="registerSelect">
+
+</body>
+</html>

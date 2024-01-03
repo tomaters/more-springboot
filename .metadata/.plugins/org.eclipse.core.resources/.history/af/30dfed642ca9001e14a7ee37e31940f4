@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" session="false"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MyBatis 게시판</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		var formObj = $("#board");
+		$("#btnModify").on("click", function() {
+			formObj.attr("action", "/board/modify");
+			formObj.attr("method", "post");
+			formObj.submit();
+		});
+		$("#btnList").on("click", function() {
+			self.location = "/board/list";
+		});
+	});
+</script>
+</head>
+<body>
+	<h2>게시글 수정</h2>
+	<form:form modelAttribute="board" action="modify">
+		<form:hidden path="boardNo" />
+/></font>
+		</td>
+/></font>
+		</td>
+/></font>
+		</td>
+		<table>
+			<tr>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+			</tr>
+			<td>Title</td>
+			<td><form:input path="title" /></td>
+			<td><font color="red"><form:errors path="title"
+						<td>Writer</td> <td><form:input path="writer" /></td>
+						<td><font color="red"><form:errors path="writer"
+<td>Content</td>
+						<td><form:textarea path="content" /></td>
+						<td><font color="red"><form:errors path="content"
+</table>
+</form:form>
+</body>
+</html>
+<div>
+</div>
+<button type="submit" id="btnModify">Modify</button>
+<button type="submit" id="btnList">List</button>

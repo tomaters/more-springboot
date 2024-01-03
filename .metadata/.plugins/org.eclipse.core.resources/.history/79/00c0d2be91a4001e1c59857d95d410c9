@@ -1,0 +1,14 @@
+package com.zeus.domain;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class Board implements Serializable {
+	public static final long seruakVersuibUID = 1L;
+	
+	private int boardNO;
+	private String title;
+	private String content;
+	private String writer;
+	private Date regDate;
+}

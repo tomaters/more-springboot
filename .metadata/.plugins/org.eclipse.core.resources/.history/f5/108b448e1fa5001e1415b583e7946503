@@ -1,0 +1,21 @@
+package com.zeus;
+
+import java.util.Date;
+
+import com.zeus.domain.Board;
+import com.zeus.service.BoardService;
+
+public final class LombokApplication {
+
+	public static void main(String[] args) {
+
+		BoardService boardService = new BoardService();
+		Board board = Board.builder()
+				.boardNo(1)
+				.title("Title")
+				.content("Content")
+				.writer("Writer")
+				.regDate(new Date()).build;
+	}
+
+}

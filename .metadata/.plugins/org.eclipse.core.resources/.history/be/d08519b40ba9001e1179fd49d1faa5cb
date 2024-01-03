@@ -1,0 +1,40 @@
+package com.zeus.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.zeus.domain.Board;
+import com.zeus.service.BoardService;
+
+public class BoardServiceImpl implements BoardService {
+
+	@Autowired
+	private BoardDAO boardDAO;
+	
+	@Override
+	public void register(Board board) throws Exception {
+		
+	}
+
+	@Override
+	public Board read(Integer boardNo) throws Exception {
+		return null;
+	}
+
+	@Override
+	public void modify(Board board) throws Exception {
+		
+	}
+
+	@Override
+	public void remove(Integer boardNo) throws Exception {
+		
+	}
+
+	@Override
+	public List<Board> list() throws Exception {
+		return null;
+	}
+ 
+}

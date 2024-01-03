@@ -1,0 +1,84 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home0104</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+		<tr>
+			<td>member.hobbyList</td>
+			<td><c:forEach var="hobby" items="${member.hobbyList}">
+${hobby} <br>
+				</c:forEach></td>
+		</tr>
+		<tr>
+			<td>\${member.hobbyList[0]}</td>
+			<td>${member.hobbyList[0]}</td>
+		</tr>
+		<tr>
+			<td>\${member.hobbyList[1]}</td>
+			<td>${member.hobbyList[1]}</td>
+		</tr>
+	</table>
+</body>
+</html>
+85 home0105.jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home0105</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>\${member.userId}</td>
+			<td>${memberMap["userId"]}</td>
+		</tr>
+		<tr>
+			<td>\${member.password}</td>
+			<td>${memberMap["password"]}</td>
+		</tr>
+		<tr>
+			<td>\${member.userName}</td>
+			<td>${memberMap["userName"]}</td>
+		</tr>
+		<tr>
+			<td>\${member.email}</td>
+			<td>${memberMap["email"]}</td>
+		</tr>
+		<tr>
+			<td>\${member.dateOfBirth}</td>
+			<td>${memberMap["dateOfBirth"]}</td>
+			<td>member.cardList</td>
+			<td><c:forEach var="card" items="${member.cardList}">
+${card.no} ${card.validMonth} <br>
+				</c:forEach></td>
+		</tr>
+		<tr>
+			<td>\${member.cardList[0].no}</td>
+			<td>${member.cardList[0].no}</td>
+		</tr>
+		<tr>
+			<td>\${member.cardList[0].validMonth}</td>
+			<td>${member.cardList[0].validMonth}</td>
+		</tr>
+		<tr>
+			<td>\${member.cardList[1].no}</td>
+			<td>${member.cardList[1].no}</td>
+		</tr>
+		<tr>
+			<td>\${member.cardList[1].validMonth}</td>
+			<td>${member.cardList[1].validMonth}</td>
+		</tr>
+	</table>
+</body>
+</html>
