@@ -33,4 +33,9 @@ public class CodeGroupServiceImpl implements CodeGroupService {
 	public void modify(CodeGroup codeGroup) throws Exception {
 		mapper.update(codeGroup);
 	}
+	
+	@Override
+	public void remove(String groupCode) throws Exception {
+		mapper.delete(groupCode);
+	}
 }

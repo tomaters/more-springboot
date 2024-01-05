@@ -41,4 +41,23 @@ public class CodeGroupController {
 	public void read(String groupCode, Model model) throws Exception {
 		model.addAttribute(service.read(groupCode));
 	}
+	
+	@GetMapping("/modify")
+	public void modifyForm(String groupCode, Model model) throws Exception {
+		model.addAttribute(service.read(groupCode));
+	}
+	
+	@PostMapping("/modify")
+	public String modifyForm(CodeGroup codeGroup, RedirectAttributes rttr) throws Exception {
+		service.modify(codeGroup);
+		rttr.addFlashAttribute("msg", "SUCCESS");
+		return "redirect:/codeGroup/list";
+	}
+	
+	@PostMapping("/remove")
+	public String remove(String groupCode, RedirectAttributes rttr) throws Exception {
+		service.remove(groupCode);
+		rttr.addFlashAttribute("msg", "SUCCESS");
+		return "redirect:/codeGroup/list";
+	}
 }

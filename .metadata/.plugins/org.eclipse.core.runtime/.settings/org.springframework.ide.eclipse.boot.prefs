@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=5
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.h2=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.jdbc=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.lombok=5
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mybatis=3
