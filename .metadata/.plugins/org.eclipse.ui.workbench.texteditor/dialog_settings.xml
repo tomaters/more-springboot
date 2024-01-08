@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="ojdb"/>
+		<item key="selection" value="starter-jd"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="starter-jd"/>
+			<item value="data"/>
+			<item value="jdbc"/>
+			<item value="starter-test"/>
+			<item value="starter-"/>
+			<item value="junit"/>
 			<item value="ojdb"/>
 			<item value="self"/>
 			<item value="codegroup"/>
@@ -17,12 +23,6 @@
 			<item value="&quot;"/>
 			<item value="boot-"/>
 			<item value="boot-p"/>
-			<item value="starter"/>
-			<item value="3.0.3"/>
-			<item value="my"/>
-			<item value="boot"/>
-			<item value="glass"/>
-			<item value="mybat"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

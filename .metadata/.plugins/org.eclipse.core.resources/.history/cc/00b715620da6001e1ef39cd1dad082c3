@@ -1,6 +1,0 @@
-<h1>Transfer data</h1>
-
-<form action="/registerModelForm01" method="post">
-userId: <input type="text" name="userId" value="hong01"><br> password: <input type="text" name="password" value="1234"><br>
-<input type="submit" value="registerModelForm01">
-</form>
