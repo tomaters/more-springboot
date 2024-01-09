@@ -55,6 +55,8 @@ public class SecurityConfig {
 		http.formLogin().loginPage("/login").successHandler(createAuthenticationSuccessHandler());
 //		http.formLogin();
 
+		http.logout().logoutUrl("/logot").invalidateHttpSession(true);
+		
 		return http.build();
 	}
 	

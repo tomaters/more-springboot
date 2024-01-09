@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="ac"/>
 			<item value="starter-jd"/>
 			<item value="data"/>
 			<item value="jdbc"/>
@@ -22,7 +23,6 @@
 			<item value="list"/>
 			<item value="&quot;"/>
 			<item value="boot-"/>
-			<item value="boot-p"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

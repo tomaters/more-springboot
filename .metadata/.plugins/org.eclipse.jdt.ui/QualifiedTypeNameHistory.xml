@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="lombok.NonNull"/>
     <fullyQualifiedTypeName name="lombok.EqualsAndHashCode"/>
-    <fullyQualifiedTypeName name="com.zeus.domain.Member"/>
     <fullyQualifiedTypeName name="com.zeus.domain.Address"/>
     <fullyQualifiedTypeName name="com.zeus.domain.Card"/>
     <fullyQualifiedTypeName name="jakarta.validation.constraints.NotBlank"/>
@@ -13,10 +12,12 @@
     <fullyQualifiedTypeName name="org.apache.commons.io.IOUtils"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
     <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="org.springframework.security.access.AccessDeniedException"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.Authentication"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.User"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.zeus.common.security.domain.CustomUser"/>
+    <fullyQualifiedTypeName name="com.zeus.domain.Member"/>
 </qualifiedTypeNameHistroy>
