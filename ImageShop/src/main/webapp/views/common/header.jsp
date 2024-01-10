@@ -4,7 +4,7 @@
 <div align="right">
 	<table>
 		<tr>
-			<td width="80"><a href="/codeGroup/register"><spring:message code="header.register" /></a></td>
+			<td width="80"><a href="/user/register"><spring:message code="user.header.register" /></a></td>
 		</tr>
 	</table>
 </div>

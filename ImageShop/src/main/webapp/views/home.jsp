@@ -20,10 +20,12 @@ pageEncoding="UTF-8"%>
 	<!-- menu -->
 	<%@ include file="/views/common/menu.jsp" %>
 	<!-- MAIN -->
+	<div class="container-fluid p-3">
 	<h1>
 		<spring:message code="common.homeWelcome" />
 	</h1>
 	<p>${serverTime}</p>
+	</div>
 	<hr>
 	<!-- FOOTER -->
 	<%@ include file="/views/common/footer.jsp" %>
