@@ -8,6 +8,7 @@
 <title>Spring security</title>
 </head>
 <body>
-	<c:out value="${msg}"/>
+	<c:out value="${msg}"/> <br>
+		<a href="/">Return home</a>
 </body>
 </html>

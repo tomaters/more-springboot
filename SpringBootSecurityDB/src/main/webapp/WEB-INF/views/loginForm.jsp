@@ -11,9 +11,9 @@
 </head>
 <body>
 	<h1>Log in</h1>
-	<h2>
+	<h6>
 		<c:out value="${error}" />
-	</h2>
+	</h6>
 	<h2>
 		<c:out value="${logout}" />
 	</h2>
@@ -23,6 +23,9 @@
 		</div>
 		<div>
 			<input type="password" name="password" value="">
+		</div>
+		<div>
+			<input type="checkbox" name="remember-me"> Remember me
 		</div>
 		<div>
 			<input type="submit">
