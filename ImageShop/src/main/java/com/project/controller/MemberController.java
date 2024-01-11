@@ -34,8 +34,7 @@ public class MemberController {
 	@GetMapping("/register")
 	public void registerForm(Member member, Model model) throws Exception {
 		String groupCode = "A00";
-		List<CodeLabelValue> jobList =
-		codeService.getCodeList(groupCode);
+		List<CodeLabelValue> jobList = codeService.getCodeList(groupCode);
 		model.addAttribute("jobList", jobList);
 	}
 	
@@ -57,6 +56,35 @@ public class MemberController {
 	
 	@GetMapping("/registerSuccess")
 	public void registerSuccess(Model model) throws Exception {
-		
+	}
+	
+	@GetMapping("/list")
+	public void list(Model model) throws Exception {
+		model.addAttribute("list", memberService.list());
+	}
+	
+	@GetMapping("/read")
+	public void read(int userNo, Model model) throws Exception {
+		String groupCode = "A00";
+		List<CodeLabelValue> jobList =
+		codeService.getCodeList(groupCode);
+		model.addAttribute("jobList", jobList);
+		model.addAttribute(memberService.read(userNo));
+	}
+	
+	@GetMapping("/modify")
+	public void modifyForm(int userNo, Model model) throws Exception {
+		String groupCode = "A00";
+		List<CodeLabelValue> jobList =
+		codeService.getCodeList(groupCode);
+		model.addAttribute("jobList", jobList);
+		model.addAttribute(memberService.read(userNo));
+	}
+	
+	@PostMapping("/modify")
+	public String modify(Member member, RedirectAttributes rttr) throws Exception {
+		memberService.modify(member);
+		rttr.addFlashAttribute("msg", "SUCCESS");
+		return "redirect:/user/list";
 	}
 }

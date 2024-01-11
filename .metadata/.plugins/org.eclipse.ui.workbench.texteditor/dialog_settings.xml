@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="btn-light btn-outline-secondary"/>
+		<item key="selection" value="Admin"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="관리자"/>
+			<item value="회원"/>
+			<item value="사용자"/>
+			<item value="=== 선택해 주세요 ==="/>
+			<item value="groupcode"/>
+			<item value="new"/>
+			<item value="job"/>
 			<item value="btn-light"/>
 			<item value="secondary"/>
 			<item value="register"/>
@@ -16,15 +23,12 @@
 			<item value="security-"/>
 			<item value="ac"/>
 			<item value="starter-jd"/>
-			<item value="data"/>
-			<item value="jdbc"/>
-			<item value="starter-test"/>
-			<item value="starter-"/>
-			<item value="junit"/>
-			<item value="ojdb"/>
-			<item value="self"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Admin"/>
+			<item value="Member"/>
+			<item value="User"/>
+			<item value="Select"/>
 			<item value="btn-light btn-outline-secondary"/>
 			<item value="btn-light btn-border"/>
 			<item value="light"/>
