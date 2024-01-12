@@ -42,6 +42,7 @@ public class MemberServiceImpl implements MemberService {
 	public void modify(Member member) throws Exception {
 		mapper.update(member);
 		int userNo = member.getUserNo(); 
+		mapper.deleteAuth(userNo);
 		List<MemberAuth> authList = member.getAuthList();
 		for (int i = 0; i < authList.size(); i++) {
 			MemberAuth memberAuth = authList.get(i);
@@ -55,5 +56,27 @@ public class MemberServiceImpl implements MemberService {
 		memberAuth.setUserNo(userNo);
 		mapper.modifyAuth(memberAuth);
 		}
+	}
+	
+	@Transactional
+	@Override
+	public void remove(int userNo) throws Exception {
+		mapper.deleteAuth(userNo);
+		mapper.delete(userNo);
+	}
+	
+	@Override
+	public int countAll() throws Exception {
+		return mapper.countAll();
+	}
+	
+	@Transactional
+	@Override
+	public void setupAdmin(Member member) throws Exception {
+		mapper.create(member);
+		MemberAuth memberAuth = new MemberAuth();
+		
+		memberAuth.setUserNo(member.getUserNo());
+		memberAuth.setAuth("ROLE_ADMIN");
 	}
 }	
